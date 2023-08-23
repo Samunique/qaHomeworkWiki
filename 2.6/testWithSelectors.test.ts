@@ -12,13 +12,16 @@ describe("Filling in the blanks", () => {
         await driver.quit();
     })
 
-    const hdrInput: By = By. //fill in the blank
-    const mkeInput: By = By. //fill in the blank
-    const oaiInput: By = By. //fill in the blank
-    const nameInput: By = By. //fill in the blank
-    const clrBtn: By = By. //fill in blank 
-    const submitBtn: By = By. //fill in blank
+    const hdrInput: By = By.css('[name="hdrInput"]')
+    const mkeInput: By = By.css('[name="mkeInput"]')
+    const oaiInput: By = By.css('[name="oriInput"]')
+    const nameInput: By = By.css('[name="namInput"]')
+    const clrBtn: By = By.css("#clearBtn")
+    const submitBtn: By = By.css("#saveBtn")
     const errorMsg: By = By. // fill in blank 
+    constructor(driver: WebDriver) {
+        this.driver = driver; 
+    };
 
     test("filling in the blanks for real", () => {
         await driver.findElement(hdrInput).sendKeys("Change this")
