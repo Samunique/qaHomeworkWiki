@@ -16,9 +16,11 @@ import {Builder,By, Capabilities, until, WebDriver, } from "selenium-webdriver";
       phoneInput: By = By.name('phoneEntry')
       titleInput: By = By.name('titleEntry');
       saveBtn: By = By.name('titleEntry');
+      //constructors
       constructor(driver: WebDriver) {
         this.driver = driver;
     }
+    //methods
     async navigate() {
         await this.driver.get(this.url);
         await this.driver.wait(until.elementLocated(this.header));
