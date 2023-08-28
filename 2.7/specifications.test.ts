@@ -1,10 +1,8 @@
 import { SpecPage } from "./specPage";
 const chromedriver = require("chromedriver");
-import { WebDriver, Builder, Capabilities } from "selenium-webdriver";
+import { WebDriver, Builder, Capabilities, until } from "selenium-webdriver";
 
-const driver: WebDriver = new Builder()
-  .withCapabilities(Capabilities.chrome())
-  .build();
+const driver: WebDriver = new Builder().withCapabilities(Capabilities.chrome()).build();
 
 const page = new SpecPage(driver);
 
